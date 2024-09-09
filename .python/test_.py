@@ -2,7 +2,8 @@ import sys
 import os
 import pytest
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from primes import isprime
+from main import isprime
+
 
 
 input_output = [(1, False), (2, True), (3, True), (4, False), (5, True),
@@ -17,3 +18,4 @@ input_output = [(1, False), (2, True), (3, True), (4, False), (5, True),
 @pytest.mark.parametrize("input,expected", input_output)
 def test(input, expected):
     assert isprime(input) == expected, input
+
